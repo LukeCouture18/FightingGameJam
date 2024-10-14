@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cb8h2408idkfn"]
+
+[ext_resource type="Script" path="res://scripts/bullet.gd" id="1_2k4fo"]
+[ext_resource type="ArrayMesh" uid="uid://bilhmmwio0uwu" path="res://bullet.obj" id="2_d5un6"]
+
+[node name="Bullet" type="Node3D"]
+transform = Transform3D(10, 0, 0, 0, -4.37114e-07, -10, 0, 10, -4.37114e-07, 0, 0, 0)
+script = ExtResource("1_2k4fo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, -2.18557e-07, -5, 0, 5, -2.18557e-07, 0, 0, 0)
+mesh = ExtResource("2_d5un6")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -1, 1.50996e-07, 0, -1.50996e-07, -1, 0, 0.00191778, -8.38287e-11)

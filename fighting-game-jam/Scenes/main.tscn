@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1yleqbb8tc7x"]
+
+[ext_resource type="PackedScene" uid="uid://b1rewixjnfbdr" path="res://levels/WE_test.tscn" id="1_me8yd"]
+[ext_resource type="PackedScene" uid="uid://c3ffql15mo0aj" path="res://Scenes/fps_controller.tscn" id="2_ac8pr"]
+[ext_resource type="PackedScene" uid="uid://n4c583w4ufwo" path="res://Scenes/gun.tscn" id="3_1qtmq"]
+[ext_resource type="PackedScene" uid="uid://ddf4s8yko6afi" path="res://Scenes/map.tscn" id="4_c8rax"]
+
+[node name="World" type="Node3D"]
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("1_me8yd")]
+
+[node name="Player" parent="." instance=ExtResource("2_ac8pr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.534035, 0)
+
+[node name="Gun" parent="Player" instance=ExtResource("3_1qtmq")]
+
+[node name="Node3D" parent="." instance=ExtResource("4_c8rax")]
